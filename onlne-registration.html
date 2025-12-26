@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Online Registration & Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2563EB;
+        }
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background: #F5F7FA;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #1F2937;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 50%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            width: 50%;
+            padding: 12px;
+            background-color: #6B7280;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #374151;
+        }
+        hr {
+            margin: 30px 0;
+        }
+    </style>
+
+    <script>
+        function showSuccessMessage() {
+            alert("✅ You are successfully registered!");
+            return false; // stops page refresh
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Student Online Registration Form</h2>
+
+    <form onsubmit="return showSuccessMessage();">
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Student ID</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" required>
+
+        <label>Gender</label>
+        <select required>
+            <option value="">--Select--</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <label>Department</label>
+        <input type="text" required>
+
+        <label>Year</label>
+        <select required>
+            <option value="">--Select--</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+
+        <hr>
+
+        <h2>Payment Form</h2>
+
+        <label>Payment Amount (ETB)</label>
+        <input type="number" required>
+
+        <label>Payment Method</label>
+        <select required>
+            <option value="">--Select--</option>
+            <option>Telebirr</option>
+            <option>Bank Transfer</option>
+            <option>Credit / Debit Card</option>
+        </select>
+
+        <label>Transaction / Reference Number</label>
+        <input type="text" required>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
